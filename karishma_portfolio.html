@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karishma Pappu - Data Scientist Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .title {
+            font-size: 1.3em;
+            color: #764ba2;
+            margin-bottom: 20px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info a:hover {
+            color: #667eea;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #764ba2;
+            font-weight: 600;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 35px;
+            padding-left: 20px;
+            border-left: 3px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover, .education-item:hover, .project-item:hover {
+            transform: translateX(10px);
+        }
+
+        .job-title, .project-title {
+            font-size: 1.4em;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            color: #764ba2;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .duration {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            margin-top: 10px;
+        }
+
+        .description li {
+            margin-bottom: 8px;
+            color: #555;
+            margin-left: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 12px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .skill-category p {
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .summary {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .title {
+                font-size: 1.1em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="font-size: 1.2em; color: #764ba2; margin-bottom: 15px; font-weight: 500;">
+                👋 Welcome to my corner of the internet!
+            </div>
+            <h1>Karishma Pappu</h1>
+            <div class="title">Data Scientist | Decision Scientist | Machine Learning Engineer | AI Engineering</div>
+            <p style="font-size: 1.05em; color: #666; margin: 20px auto; max-width: 700px; line-height: 1.6;">
+                I turn coffee ☕ into code and data into insights. When I'm not training models or debugging pipelines, 
+                you'll find me exploring the fascinating world where math meets reality. Stick around to see how I make machines think! 🤖✨
+            </p>
+            <div class="contact-info">
+                <a href="mailto:pappukarishma2@gmail.com">📧 pappukarishma2@gmail.com</a>
+                <a href="tel:913-263-4357">📞 913-263-4357</a>
+                <a href="https://www.linkedin.com/in/karishma-pappu-443185275/" target="_blank">💼 LinkedIn Profile</a>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p class="summary">
+                Data Scientist with 3+ years of experience designing and deploying scalable machine-learning models, automating data pipelines, and visualizing insights that drive business decisions. Proficient in Python, SQL, Spark, and cloud platforms (AWS, Azure). Skilled in predictive analytics, feature engineering, and MLOps for real-world impact across healthcare, finance, and manufacturing domains.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <p>Python, R, SQL, Scala, Java</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <p>Regression, Classification, Clustering, NLP, Recommendation Systems, Model Deployment</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Big Data & ETL</h3>
+                    <p>Hadoop, Spark, Hive, Kafka, Sqoop, DataStage, Airflow</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <p>MySQL, Oracle, MongoDB, Cassandra, HBase</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <p>AWS (EC2, S3, Redshift), Azure (ML, Databricks)</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Visualization</h3>
+                    <p>Tableau, Power BI, D3.js, ggplot2</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Frameworks</h3>
+                    <p>TensorFlow, Keras, PyTorch, Docker, Kubernetes, Git, Control-M</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Statistical Techniques</h3>
+                    <p>Feature Engineering, A/B Testing, PCA, Cross-Validation, Hypothesis Testing</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-title">Senior Data Scientist</div>
+                <div class="company">Koch Industries</div>
+                <div class="duration">Wichita, Kansas, USA | Jun 2025 - Present</div>
+                <ul class="description">
+                    <li>Designed and deployed predictive models using Azure ML and TensorFlow to forecast production metrics with 15% higher accuracy</li>
+                    <li>Built distributed data pipelines in Spark to process 10+ TB of raw data across multiple business units</li>
+                    <li>Automated feature engineering workflows in Python, reducing data-prep time by 40%</li>
+                    <li>Developed Tableau and Power BI dashboards integrating SQL and NoSQL data sources for executive insights</li>
+                    <li>Applied NLP techniques for text analytics, using Random Forest and SVM models to improve classification accuracy</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Senior Data Scientist</div>
+                <div class="company">Blue Cross & Blue Shield of Kansas</div>
+                <div class="duration">Topeka, Kansas, USA | Feb 2024 - May 2025</div>
+                <ul class="description">
+                    <li>Developed machine-learning models (Logistic Regression, Random Forest, Gradient Boosting) to predict policy risks and optimize underwriting</li>
+                    <li>Built real-time streaming pipelines with Apache Kafka for low-latency data ingestion and analytics</li>
+                    <li>Utilized Azure Databricks for distributed model training and data transformation</li>
+                    <li>Conducted cross-validation, ROC/AUC analysis, and feature selection for model interpretability</li>
+                    <li>Produced interactive dashboards in Tableau for claims analysis and risk visualization</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Data Scientist</div>
+                <div class="company">ICICI Bank</div>
+                <div class="duration">Hyderabad, India | Apr 2022 - May 2023</div>
+                <ul class="description">
+                    <li>Designed and deployed ML models for fraud detection and credit-risk scoring using AWS Lambda for serverless inference</li>
+                    <li>Automated retraining pipelines with Docker and Kubernetes, ensuring periodic model updates</li>
+                    <li>Built Spark ETL workflows processing multi-source banking data to support regulatory reporting</li>
+                    <li>Developed Tableau dashboards for KPIs such as loan approval trends and NPA analysis</li>
+                    <li>Improved data accuracy by implementing CDC (Change Data Capture) and reconciliation in SQL</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Data Analyst</div>
+                <div class="company">True Value</div>
+                <div class="duration">Chennai, India | Sep 2021 - Mar 2022</div>
+                <ul class="description">
+                    <li>Integrated multi-source data using SQL and Python to produce actionable insights for pricing and inventory optimization</li>
+                    <li>Built predictive models (XGBoost, Logistic Regression, Random Forest) to improve demand forecasting by 12%</li>
+                    <li>Conducted NLP-based sentiment analysis to identify customer trends and feedback patterns</li>
+                    <li>Automated Azure AutoML pipelines for hyperparameter tuning, accelerating model deployment cycles</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Featured Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-title">A/B Testing Framework for Product Optimization</div>
+                <div class="company">Statistical Analysis & Experimentation</div>
+                <ul class="description">
+                    <li>Designed and implemented a comprehensive A/B testing framework to evaluate product features and user experience improvements</li>
+                    <li>Conducted hypothesis testing using statistical methods including t-tests, chi-square tests, and ANOVA to validate experiment results</li>
+                    <li>Applied Bayesian analysis and sequential testing to optimize sample sizes and reduce experiment duration by 25%</li>
+                    <li>Built automated reporting dashboards in Tableau to visualize conversion metrics, confidence intervals, and statistical significance</li>
+                    <li>Implemented power analysis and sample size calculations to ensure robust experimental design</li>
+                    <li>Resulted in data-driven decisions that improved key performance metrics by 18% across multiple product features</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Intelligent Recommendation System</div>
+                <div class="company">Machine Learning & Personalization</div>
+                <ul class="description">
+                    <li>Developed a hybrid recommendation system combining collaborative filtering and content-based approaches using Python and TensorFlow</li>
+                    <li>Implemented matrix factorization techniques (SVD, ALS) and deep learning models (Neural Collaborative Filtering) for personalized recommendations</li>
+                    <li>Processed and analyzed user behavior data from 1M+ interactions using Spark for distributed computing</li>
+                    <li>Applied dimensionality reduction techniques (PCA, t-SNE) to identify latent user preferences and item similarities</li>
+                    <li>Optimized model performance through hyperparameter tuning and cross-validation, achieving 92% precision@10</li>
+                    <li>Deployed the model using Docker containers on AWS, handling real-time recommendations with sub-100ms latency</li>
+                    <li>Increased user engagement by 35% and click-through rates by 28% through personalized content delivery</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="job-title">Master of Science in Computer Science</div>
+                <div class="company">University of Central Missouri</div>
+                <div class="duration">Missouri, USA</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Karishma Pappu. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
